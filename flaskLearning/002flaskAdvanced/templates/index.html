@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Teach Me || E-Learning HTML Template">
+
+    <title>Producer: yzhbradoodrrpurp</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/media/favicon/favicon.png">
+
+    <!-- All CSS files -->
+    <link rel="stylesheet" href="static/css/font-awesome.css">
+    <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/slick.css">
+    <link rel="stylesheet" href="static/css/slick-theme.css">
+    <link rel="stylesheet" href="static/css/app.css">
+
+</head>
+
+<body class="tt-smooth-scroll x-hidden">
+
+    <!-- Preloader-->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Preloader-->
+
+    <!-- Main Wrapper Start -->
+    <div id="scroll-container">
+
+        <!-- Top-picks start -->
+        <section class="mt-48 mb-40">
+            <div class="container-fluid">
+                <div class="heading mb-24">
+                    <h4 class="white mb-12">Top Picks Randomly</h4>
+                    <a href="/randompicks" class="p white">See All <span><i class="fa-regular fa-chevron-right"></i></span></a>
+                </div>
+                <div class="picksSlider row">
+                    {% for random_pick in random_picks %}
+                        <div class="col-12">
+                            <a href="{{ random_pick[7] }}" class="anime-card gap-24">
+                                <img src="static/picture/anime-06.jpg" alt="pic">
+                                <div class="overlay"></div>
+                                <div class="text">
+                                    <h6 class="white">{{ random_pick[0] }}</h6>
+                                    <p class="white">{{ random_pick[6] }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- Top-picks end -->
+
+        <!-- inner-banner start -->
+
+        <!-- inner-banner end -->
+
+        <!--accordion start -->
+        <section class=" mt-48 mb-24">
+            <div class="container-fluid">
+                <div class="heading mb-24">
+                    <h4 class="white mb-12">Top-rated Films</h4>
+                    <a href="/toprated" class="p white">See All <span><i class="fa-regular fa-chevron-right"></i></span></a>
+                </div>
+                <div class="anime-grid">
+                    {% for film in films %}
+                        <a href="{{ film[7] }}" class="anime-card gap-24">
+                            <img src="static/picture/anime-06.jpg" alt="pic">
+                            <div class="overlay"></div>
+                            <div class="text">
+                                <h6 class="white">{{ film[0] }}</h6>
+                                <p class="white">{{ film[6] }}</p>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Main Wrapper End -->
+
+    <button class="scrollToTopBtn"><i class="fa fa-arrow-up"></i></button>
+
+
+
+    <!-- Mobile Menu Start -->
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box">
+                <a href="" aria-label="logo image"><img src="static/picture/logo.png" alt="logo"></a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa-thin fa-envelope"></i>
+                    <a href="mailto:example@company.com">example@company.com</a>
+                </li>
+                <li>
+                    <i class="fa-light fa-phone-volume"></i>
+                    <a href="tel:+12345678">+123 (4567) -890</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Mobile Menu End -->
+
+
+
+    <!-- Jquery Js -->
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery-3.6.3.min.js"></script>
+    <script src="static/js/slick.min.js"></script>
+    <script src="static/js/app.js"></script>
+
+
+</body>
+
+</html>

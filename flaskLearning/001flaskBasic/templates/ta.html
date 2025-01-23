@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TA Information</title>
+</head>
+<body>
+    <!--html中引用传来的变量，要加上双大括号，大括号里用变量名。-->
+    <!--<br/>的意思是换行符。-->
+    <p>Welcome to the TA website of UC Berkeley!</p>
+    <p>The office hours are {{ office_hours }}</p>
+    <p>The staff persons for today are as follows:</p>
+
+    <!--在html中写控制结构要用{\% ... \%}括起来，我用\将%转义了，否则会有报错。-->
+    {% for staff in staffs %}
+        <!--{\{ ... \}}是和上面一样的用法，<li>是一个标签，用于定义一个列表项。-->
+        <li>{{ staff }}</li>
+    <!--endfor表示控制结构的结束。-->
+    {% endfor %}
+
+    <p>You can come to us anytime for help!</p>
+
+    <!--table是一个表格标签，可以用border="1"来打印出边框(虽然这种用法已过时)。-->
+    <table border="1">
+        <!--<tr>表示一行。-->
+        <tr>
+            <!--<td>表示一行中不同的列。-->
+            <td>Staff's Name</td>
+            <td>Major</td>
+            <td>Office</td>
+        </tr>
+
+        {% for staff, major in staffs_majors.items() %}
+            <tr>
+                <td>{{ staff }}</td>
+                <td>{{ major }}</td>
+                <td>Room 601, Main Hall.</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

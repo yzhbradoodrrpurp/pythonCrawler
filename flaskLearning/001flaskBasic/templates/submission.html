@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Student Information</title>
+</head>
+<body>
+    <!--form标签用于创建用户提交数据的表单。-->
+    <!--action里的内容表示接收表单的路径。-->
+    <!--method可以是get, 也可以是post。-->
+    <!--get方法会直接将表单数据会作为查询参数附加到url中。-->
+    <!--post方法就能够使用request.form得到对应的字典。-->
+    <!--无论哪种方法，method必须被包含于接收表单路径的methods方法。-->
+    <form action="/results_from_submission" method="post">
+        <!--label标签是打开网页后会出现的字符，在这里输入名字。-->
+        <label>Name:
+            <!--输入的类型就是text，保存在名为Name的变量里。-->
+            <input type="text" name="Name">
+        </label>
+        <label>Gender:
+            <input type="text" name="Gender">
+        </label>
+        <label>Identity:
+            <input type="number" name="Identity">
+        </label>
+        <label>Address:
+            <input type="text" name="Address">
+        </label>
+        <Label>Email:
+            <input type="text" name="Email">
+        </Label>
+        <label>Submit:
+            <!--类型为submit时，创建一个提交按钮。-->
+            <!--当用户按下这个按钮时，会将表单信息提交给服务器的指定路由action。-->
+            <input type="submit" name="Submit">
+        </label>
+    </form>
+
+</body>
+</html>
